@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <main>
+            <h1> <img class="bot-logo" src="bot.png"> Ask Jeeves </h1>
+            <div class="category-selector">
+                <select id="activity-type" class="activity-dropdown">
+                    <option value="">All Activities</option>
+                    <option value="education">Educational</option>
+                    <option value="recreational">Recreational</option>
+                    <option value="social">Social</option>
+                    <option value="diy">DIY</option>
+                    <option value="charity">Charity</option>
+                    <option value="cooking">Cooking</option>
+                    <option value="relaxation">Relaxation</option>
+                    <option value="music">Music</option>
+                    <option value="busywork">Busywork</option>
+                </select>
+            </div>
+            <div class="buttons-container">
+                <button id="btn_activity" class="bot_btn2" role="button" aria-label="find a new activity">
+                    <img src="chatbot.png" class="bot_btn"> 
+                    <p aria-live="polite">Click me for an idea...</p>
+                </button>
+                <button id="btn_joke" class="bot_btn2" role="button" aria-label="tell me a joke">
+                    <img src="chatbot.png" class="bot_btn"> 
+                    <p aria-live="polite">Tell me a joke!</p>
+                </button>
+            </div>
+
+            <div id="joke-container" class="joke-container">
+                <p id="joke-setup" class="joke-setup"></p>
+                <p id="joke-punchline" class="joke-punchline hidden"></p>
+            </div>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>

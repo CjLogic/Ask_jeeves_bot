@@ -1,0 +1,227 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* .background{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width:100%;
+    height: 100vh;
+    background-color: gainsboro;
+} */
+
+body {
+  margin: 50px;
+  padding: 10px 0;
+  background: linear-gradient(to right, rgb(112, 144, 144), rgb(112, 128, 144), rgb(112, 112, 144));
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Oxygen, sans-serif;
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 1rem;
+}
+
+.bot-logo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.bot_btn {
+    width: 18%;
+}
+
+@media (min-width: 50px) and (max-width: 400px) {
+      .bot_btn {
+      width: 70%;
+}
+      p {
+        font-size: 1.2rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .bot-logo {
+      width: 40%;
+      }
+}
+
+.bot_btn, .bot_btn2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bot_btn2 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.bot_btn2, #btn_activity {
+    font-size: 1.5rem;
+    color: #ffd900;
+    /* color: #6495ed; */
+    /* font-weight: 600; */
+}
+
+.bot_btn2:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.bot_btn2:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgb(112, 144, 144), rgb(112, 128, 144), rgb(112, 112, 144));
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.category-selector {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.activity-dropdown {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid rgb(112, 144, 144);
+  background-color: whitesmoke;
+  color: rgb(70, 70, 70);
+  cursor: pointer;
+  font-family: Oxygen, sans-serif;
+}
+
+.activity-dropdown:hover {
+  border-color: rgb(92, 124, 124);
+}
+
+.activity-details {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 1.1rem;
+}
+
+.activity-type {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.joke-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.joke-setup {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.divContainer {
+  font-size: 1.3rem;
+}
+
+.joke-punchline {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffd700;
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+@media (min-width: 768px) {
+    .buttons-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
+}
